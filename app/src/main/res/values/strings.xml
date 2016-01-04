@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FinalProject</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="page_title">Page title</string>
+    <string name="compass_notice1">compass notice 1</string>
+    <string name="compass_notice2">compass notice 2</string>
+    <string name="masjidlocation_notice1">this is the masjid location</string>
+    <string name="events_notice1">events notice 1</string>
+    <string name="prayertimes_notice1">prayer times notice 1</string>
+    <string name="prayertimes_notice2">prayer times notice 2</string>
+    <string name="prayertimes_cityselection">prayertimes_cityselection </string>
+    <string name="drawer_open">thedraweropen</string>
+    <string name="drawer_close">closedrawer</string>
+</resources>
