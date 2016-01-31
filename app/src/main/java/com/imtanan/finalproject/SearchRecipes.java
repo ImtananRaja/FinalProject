@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class PrayerTimesFragment extends Fragment {
+public class SearchRecipes extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.prayertimes_fragment, container, false);
+        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.searchrecipes_fragment, container, false);
         return v;
     }
 }

@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MasjidLocationFragment extends Fragment {
+public class SupermarketLocation extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.masjidlocation_fragment, container, false);
+        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.supermarketlocation_fragment, container, false);
         return v;
     }
 }

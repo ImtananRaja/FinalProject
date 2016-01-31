@@ -5,37 +5,30 @@ package com.imtanan.finalproject;
  */
 //import com.msdesign.qibla.R;
 
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CompassFragment extends Fragment implements SensorEventListener {
+public class UploadImageFragment extends Fragment{ //implements SensorEventListener {
 
     TextView notice1, notice2;
-    private ImageView image; // Define the display assembly compass picture
-    private float currentDegree = 0; // Record the compass picture angle turned
-    private SensorManager mSensorManager; // Device sensor manager
+   // private ImageView image; // Define the display assembly compass picture
+   // private float currentDegree = 0; // Record the compass picture angle turned
+   // private SensorManager mSensorManager; // Device sensor manager
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.compass_fragment, container, false);
+        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.ulimage_fragment, container, false);
 
         notice1 = (TextView) v.findViewById(R.id.notice1);
-        image = (ImageView) v.findViewById(R.id.viewCompass);
+       // image = (ImageView) v.findViewById(R.id.viewCompass);
         notice2 = (TextView) v.findViewById(R.id.notice2);
 
         // Initialise android device sensor capabilities
-        mSensorManager = (SensorManager) (SensorManager)getActivity().getSystemService(getActivity().SENSOR_SERVICE);
+     //   mSensorManager = (SensorManager) (SensorManager)getActivity().getSystemService(getActivity().SENSOR_SERVICE);
 
         return v;
     }
@@ -45,20 +38,20 @@ public class CompassFragment extends Fragment implements SensorEventListener {
         super.onResume();
 
         // for the system's orientation sensor registered listeners
-        mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
-                SensorManager.SENSOR_DELAY_GAME);
+     //   mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+       //         SensorManager.SENSOR_DELAY_GAME);
     }
 
-    @Override
+    //@Override
     public void onPause() {
         super.onPause();
 
         // to stop the listener and save battery
-        mSensorManager.unregisterListener(this);
+       // mSensorManager.unregisterListener(this);
     }
 
-    @Override
-    public void onSensorChanged(SensorEvent event) {
+    //@Override
+   /* public void onSensorChanged(SensorEvent event) {
 
         // get the angle around the z-axis rotated
         float degree = Math.round(event.values[0]);
@@ -83,4 +76,6 @@ public class CompassFragment extends Fragment implements SensorEventListener {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         // not in use
     }
+
+    */
 }

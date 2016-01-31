@@ -32,15 +32,15 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation);
 
         // Display Qibla Compass on startup.
-        setTitle("Qibla Compass");
-        Fragment fragment = new CompassFragment(); // Set Home of the App
+        setTitle("Let's Cook");
+        Fragment fragment = new UploadImageFragment(); // Set Home of the App
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
 
-        mNavItems.add(new NavigationItem("Qibla Compass", R.drawable.ic_launcher));
-        mNavItems.add(new NavigationItem("Prayer Times", R.drawable.ic_launcher));
-        mNavItems.add(new NavigationItem("Local Masjid ", R.drawable.ic_launcher));
-        mNavItems.add(new NavigationItem("Events", R.drawable.ic_launcher));
+        mNavItems.add(new NavigationItem("Search Recipes", R.drawable.searchrecipes));
+        mNavItems.add(new NavigationItem("Upload a Picture", R.drawable.upload_image));
+        mNavItems.add(new NavigationItem("Find a Store", R.drawable.location_pinpoint));
+        mNavItems.add(new NavigationItem("About Us", R.drawable.about_us));
 
         // DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -113,16 +113,16 @@ public class NavigationActivity extends AppCompatActivity {
         switch(position) {
             default:
             case 0:
-                fragment = new CompassFragment();
+                fragment = new UploadImageFragment();
                 break;
             case 1:
-                fragment = new PrayerTimesFragment();
+                fragment = new EditRecipesFragment();
                 break;
             case 2:
-                fragment = new MasjidLocationFragment();
+                fragment = new SupermarketLocation();
                 break;
             case 3:
-                fragment = new EventsFragment();
+                fragment = new SearchRecipes();
                 break;
         }
 

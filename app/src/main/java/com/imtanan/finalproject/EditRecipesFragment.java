@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class EventsFragment extends Fragment {
+public class EditRecipesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.events_fragment, container, false);
+        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.erecipes_fragment, container, false);
         return v;
     }
 }
