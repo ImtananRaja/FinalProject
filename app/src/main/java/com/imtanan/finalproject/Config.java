@@ -32,4 +32,9 @@ public class Config {
 
     //We will use this to store the boolean in sharedpreference to track user is loggedin or not
     public static final String LOGGEDIN_SHARED_PREF = "loggedin";
+    //This is do the Url for the user to upload an image to the database
+    public static final String UPLOAD_URL ="http://iaraja.mohammedsohaib.com/VolleyUpload/Upload.php";
+    //The names of the variables in UplaodImage.java class
+    public static final String KEY_IMAGE = "image";
+    public static final String KEY_NAME = "name";
 }
