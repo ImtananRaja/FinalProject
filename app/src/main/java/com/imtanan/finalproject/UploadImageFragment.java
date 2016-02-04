@@ -39,7 +39,7 @@ import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class UploadImageFragment extends Fragment implements View.OnClickListener{ //implements SensorEventListener {
+public class UploadImageFragment extends Fragment implements View.OnClickListener{
     private Button buttonChoose;
     private Button buttonUpload;
 

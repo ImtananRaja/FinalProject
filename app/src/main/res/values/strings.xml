@@ -7,7 +7,7 @@
     <string name="page_title">Page title</string>
     <string name="compass_notice1">compass notice 1 on the compass_fragment</string>
     <string name="compass_notice2">this is notice 2 on the compass_fragment</string>
-    <string name="masjidlocation_notice1">this is the masjid location on the masjidlocation_fragment</string>
+    <string name="Supermarket_location">this is the supermarket location on the supermarket_fragment</string>
     <string name="events_notice1">This is the about us page which is in the events_fragment.xml</string>
     <string name="prayertimes_notice1"></string>
     <string name="prayertimes_notice2">prayer times notice 2</string>

@@ -15,8 +15,6 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-//import com.msdesign.qibla.R;
-
 public class NavigationActivity extends AppCompatActivity {
 
     ListView mDrawerList;
@@ -37,10 +35,10 @@ public class NavigationActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
 
-        mNavItems.add(new NavigationItem("Search Recipes", R.drawable.searchrecipes));
+        mNavItems.add(new NavigationItem("About Us", R.drawable.about_us));
         mNavItems.add(new NavigationItem("Upload a Picture", R.drawable.upload_image));
         mNavItems.add(new NavigationItem("Find a Store", R.drawable.location_pinpoint));
-        mNavItems.add(new NavigationItem("About Us", R.drawable.about_us));
+        mNavItems.add(new NavigationItem("Search Recipes", R.drawable.searchrecipes));
 
         // DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
