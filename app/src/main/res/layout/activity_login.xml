@@ -6,10 +6,9 @@
     android:scaleType="centerCrop"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.imtanan.finalproject.LoginActivity" >
 
-  <!--  <ImageView
+   <ImageView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +16,7 @@
         android:layout_marginBottom="10dp"
         android:padding="3dp"
         android:layout_gravity="center"/>
--->
+
 
     <EditText
         android:id="@+id/email"
@@ -30,9 +29,7 @@
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/Black"
-        android:textColorHint="@color/HotPink"
-        android:layout_above="@+id/buttonLogin"
-        android:layout_alignParentStart="true" />
+        android:textColorHint="@color/HotPink" />
 
     <EditText
         android:id="@+id/password"
@@ -45,9 +42,7 @@
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/Black"
-        android:textColorHint="@color/HotPink"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:textColorHint="@color/HotPink" />
 
 
     <Button

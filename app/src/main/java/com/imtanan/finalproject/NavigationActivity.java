@@ -1,11 +1,16 @@
 package com.imtanan.finalproject;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,6 +44,7 @@ public class NavigationActivity extends AppCompatActivity {
         mNavItems.add(new NavigationItem("Upload a Picture", R.drawable.upload_image));
         mNavItems.add(new NavigationItem("Find a Store", R.drawable.location_pinpoint));
         mNavItems.add(new NavigationItem("Search Recipes", R.drawable.searchrecipes));
+        mNavItems.add(new NavigationItem("Logout ", R.drawable.ic_launcher));
 
         // DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -122,6 +128,51 @@ public class NavigationActivity extends AppCompatActivity {
             case 3:
                 fragment = new SearchRecipes();
                 break;
+            case 4:
+                fragment = new LogoutFragment();
+                break;
+
+        }
+
+        if(position == 4){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setMessage("Are you sure you want to logout?");
+            alertDialogBuilder.setPositiveButton("Yes",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
+
+                            //Getting out sharedpreferences
+                            SharedPreferences preferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                            //Getting editor
+                            SharedPreferences.Editor editor = preferences.edit();
+
+                            //Puting the value false for loggedin
+                            editor.putBoolean(Config.LOGGEDIN_SHARED_PREF, false);
+
+                            //Putting blank value to email
+                            editor.putString(Config.EMAIL_SHARED_PREF, "");
+
+                            //Saving the sharedpreferences
+                            editor.commit();
+
+                            //Starting login activity
+                            Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+
+            alertDialogBuilder.setNegativeButton("No",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
+
+                        }
+                    });
+
+            //Showing the alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
         }
 
         fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();

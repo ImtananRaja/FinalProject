@@ -4,9 +4,16 @@ package com.imtanan.finalproject;
  * Created by Mani on 03/01/2016.
  */
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -33,7 +40,7 @@ public class SearchRecipes extends Fragment implements View.OnClickListener {
     private TextView textViewResult1;
     private TextView textViewResult2;
     private TextView textViewResult3;
-
+    private TextView textView;
     private ProgressDialog loading;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +54,12 @@ public class SearchRecipes extends Fragment implements View.OnClickListener {
         textViewResult1 = (TextView) v.findViewById(R.id.textViewResult1);
         textViewResult2 = (TextView) v.findViewById(R.id.textViewResult2);
         textViewResult3 = (TextView) v.findViewById(R.id.textViewResult3);
+        textView = (TextView)   v.findViewById(R.id.textView);
 
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        String email = sharedPreferences.getString(Config.EMAIL_SHARED_PREF,"Not Available");
+
+        textView.setText("Current User: " + email);
         buttonRecipe.setOnClickListener(this);
         return v;
 
@@ -62,10 +74,11 @@ public class SearchRecipes extends Fragment implements View.OnClickListener {
         }
         loading = ProgressDialog.show(SearchRecipes.this.getActivity(), "Please wait...", "Fetching...", false, false);
 
-        String url = Config.DATA_URL + editTextId.getText().toString().trim();
+        //Changed it so all the searching will be from database to lowercase
+        String url = Config.DATA_URL + editTextId.getText().toString().toLowerCase().trim();
 
-
-        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
+        //Changed it so all the searching will be from database to lowercase
+        StringRequest stringRequest = new StringRequest(url.toLowerCase(), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 loading.dismiss();
@@ -82,6 +95,7 @@ public class SearchRecipes extends Fragment implements View.OnClickListener {
         RequestQueue requestQueue = Volley.newRequestQueue(SearchRecipes.this.getActivity());
         requestQueue.add(stringRequest);
     }
+
 
     private void showJSON(String response) {
         String recipe_name = "";
