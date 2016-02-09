@@ -1,6 +1,7 @@
 package com.imtanan.finalproject;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -49,6 +50,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if(v == buttonRegister){
             registerUser();
+
+            Intent i= new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(i);
         }
     }
 
@@ -95,7 +99,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     result = bufferedReader.readLine();
 
                     return result;
-                }catch(Exception e){
+
+                   }catch(Exception e){
                     return null;
                 }
             }

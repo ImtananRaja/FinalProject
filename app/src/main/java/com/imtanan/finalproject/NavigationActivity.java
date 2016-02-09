@@ -158,7 +158,13 @@ public class NavigationActivity extends AppCompatActivity {
 
                             //Starting login activity
                             Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
+                            //to clean up activities so the session remains dead
+                            intent.putExtra("finish", true); // if you are checking for this in your other activities
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |
+                                            Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                                            Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
+                            finish();
                         }
                     });
 
@@ -173,7 +179,15 @@ public class NavigationActivity extends AppCompatActivity {
             //Showing the alert dialog
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
+
+
+        }else if(position != 4){
+
+            position = 0;
+
         }
+
+
 
         fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
 
