@@ -28,7 +28,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private Button buttonRegister;
 
-    private static final String REGISTER_URL = "http://iaraja.mohammedsohaib.com/mobile/register.php";
+    //Made public and placed in the Config file of the application to make easier access
+   // private static final String REGISTER_URL = "http://iaraja.mohammedsohaib.com/mobile/register.php";
 
 
     @Override
@@ -91,7 +92,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 String s = params[0];
                 BufferedReader bufferedReader = null;
                 try {
-                    URL url = new URL(REGISTER_URL+s);
+                    URL url = new URL(Config.REGISTER_URL+s);
                     HttpURLConnection con = (HttpURLConnection) url.openConnection();
                     bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 

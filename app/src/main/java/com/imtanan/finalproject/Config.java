@@ -13,6 +13,9 @@ public class Config {
     public static final String JSON_ARRAY = "result";
 
 
+    //The Url for register
+    public static final String REGISTER_URL = "http://iaraja.mohammedsohaib.com/mobile/register.php";
+
     //URL to our login.php file
     public static final String LOGIN_URL = "http://iaraja.mohammedsohaib.com/mobile/login.php";
     //Keys for email and password as defined in our $_POST['key'] in login.php
