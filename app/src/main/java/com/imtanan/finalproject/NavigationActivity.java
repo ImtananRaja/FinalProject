@@ -180,10 +180,10 @@ public class NavigationActivity extends AppCompatActivity {
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
 
+           }else if(position != 4){
 
-        }else if(position != 4){
 
-            position = 0;
+            position = 3;
 
         }
 

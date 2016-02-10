@@ -67,8 +67,8 @@ public class SearchRecipes extends Fragment implements View.OnClickListener {
 
     }
     private void getData() {
-        String id = editTextId.getText().toString().trim();
-        if (id.equals("") /*|| id.equals(null)*/) {
+        String recipe_name = editTextId.getText().toString().trim();
+        if (recipe_name.equals("") /*|| id.equals(null)*/) {
             Toast.makeText(SearchRecipes.this.getActivity(), "Please enter a recipe name", Toast.LENGTH_LONG).show();
             return;
         }
