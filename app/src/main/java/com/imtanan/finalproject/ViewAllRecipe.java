@@ -31,8 +31,10 @@ public class ViewAllRecipe extends android.support.v4.app.Fragment implements Li
 
     private String JSON_STRING;
 
+
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.logout_frament, container, false);
+        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.viewallrecipe_fragment, container, false);
 
         listView = (ListView) v.findViewById(R.id.listView);
         listView.setOnItemClickListener(ViewAllRecipe.this);
@@ -102,10 +104,11 @@ public class ViewAllRecipe extends android.support.v4.app.Fragment implements Li
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent = new Intent(ViewAllRecipe.this.getActivity(), EditRecipesFragment.class);
+        //Intent intent = new Intent(context, EditRecipesFragment.class);
+       Intent i = new Intent(ViewAllRecipe.this.getActivity(), EditRecipesFragment.class);
         HashMap<String, String> map = (HashMap) parent.getItemAtPosition(position);
-        String empId = map.get(Config.TAG_ID).toString();
-        intent.putExtra(Config.REC_ID, empId);
-        startActivity(intent);
+        String RecId = map.get(Config.TAG_ID).toString();
+        i.putExtra(Config.REC_ID, RecId);
+        getActivity().startActivity(i);
     }
 }
