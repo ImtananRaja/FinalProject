@@ -44,7 +44,7 @@ public class NavigationActivity extends AppCompatActivity {
         mNavItems.add(new NavigationItem("Upload a Picture", R.drawable.upload_image));
         mNavItems.add(new NavigationItem("Find a Store", R.drawable.location_pinpoint));
         mNavItems.add(new NavigationItem("Search Recipes", R.drawable.searchrecipes));
-        mNavItems.add(new NavigationItem("Create A Recipe", R.drawable.ic_launcher));
+      mNavItems.add(new NavigationItem("Create A Recipe", R.drawable.ic_launcher));
         mNavItems.add(new NavigationItem("Edit Recipes", R.drawable.ic_launcher));
         mNavItems.add(new NavigationItem("View All Recipes", R.drawable.ic_launcher));
         mNavItems.add(new NavigationItem("Logout ", R.drawable.ic_launcher));

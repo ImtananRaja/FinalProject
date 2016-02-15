@@ -104,6 +104,7 @@ public class ViewAllRecipe extends android.support.v4.app.Fragment implements Li
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
         //Intent intent = new Intent(context, EditRecipesFragment.class);
        Intent i = new Intent(ViewAllRecipe.this.getActivity(), EditRecipesFragment.class);
         HashMap<String, String> map = (HashMap) parent.getItemAtPosition(position);
