@@ -34,19 +34,19 @@ public class NavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
-        // Display Qibla Compass on startup.
+        // Display Let's Cook Upload a Picture on startup.
         setTitle("Let's Cook");
         Fragment fragment = new UploadImageFragment(); // Set Home of the App
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
 
-        mNavItems.add(new NavigationItem("About Us", R.drawable.about_us));
         mNavItems.add(new NavigationItem("Upload a Picture", R.drawable.upload_image));
+        mNavItems.add(new NavigationItem("Edit Recipes", R.drawable.ic_launcher));
         mNavItems.add(new NavigationItem("Find a Store", R.drawable.location_pinpoint));
         mNavItems.add(new NavigationItem("Search Recipes", R.drawable.searchrecipes));
-      mNavItems.add(new NavigationItem("Create A Recipe", R.drawable.ic_launcher));
-        mNavItems.add(new NavigationItem("Edit Recipes", R.drawable.ic_launcher));
+        mNavItems.add(new NavigationItem("Create A Recipe", R.drawable.ic_launcher));
         mNavItems.add(new NavigationItem("View All Recipes", R.drawable.ic_launcher));
+        mNavItems.add(new NavigationItem("About Us", R.drawable.about_us));
         mNavItems.add(new NavigationItem("Logout ", R.drawable.ic_launcher));
 
         // DrawerLayout
@@ -134,11 +134,14 @@ public class NavigationActivity extends AppCompatActivity {
             case 4:
                 fragment = new NewRecipeFragment();
                 break;
+         //   case 5:
+           //     fragment = new EditRecipesFragment();
+             //   break;
             case 5:
-                fragment = new EditRecipesFragment();
+                fragment = new ViewAllRecipe();
                 break;
             case 6:
-                fragment = new ViewAllRecipe();
+                fragment = new AboutUsFragment();
                 break;
             case 7:
                 fragment = new LogoutFragment();

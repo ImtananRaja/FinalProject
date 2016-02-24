@@ -3,61 +3,6 @@ package com.imtanan.finalproject;
 /**
  * Created by Mani on 03/01/2016.
  */
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-
-import org.json.JSONObject;
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-import android.app.Dialog;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-
-import org.json.JSONObject;
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
 import android.app.Dialog;
 import android.location.Address;
 import android.location.Geocoder;
@@ -72,6 +17,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 
 public class SupermarketLocation extends Fragment {
@@ -333,8 +298,11 @@ public class SupermarketLocation extends Fragment {
             }
         }
 
-        String search = "https://maps.googleapis.com/maps/api/place/search/json?name=supermarket&rankby=distance&location="
-                + latitude + "," + longitude + "&sensor=true&key=AIzaSyC3Zah5j_NVIp3gZVZ1cGZjajz6cGsxo4k";
+        String search = "https://maps.googleapis.com/maps/api/place/search/json?&name=mosque&rankby=distance&location="
+        + latitude + "," + longitude + "&sensor=true&key=AIzaSyDYpA5qUH7t80rRfj43-loNsxYrETJQrbs"; //"&sensor=true&key=AIzaSyDr8x8BsxcaJ1-akrgKEQruVDaSL8Y8BTA";
+
+        //String search = "https://maps.googleapis.com/maps/api/place/search/json?name=supermarket&rankby=distance&location="
+         //       + latitude + "," + longitude + "&sensor=true&key=AIzaSyC3Zah5j_NVIp3gZVZ1cGZjajz6cGsxo4k";
 
         PlacesTask placesTask = new PlacesTask();
         placesTask.execute(search);

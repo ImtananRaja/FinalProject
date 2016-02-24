@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.imtanan.finalproject" >
-<!--This is the API key used for debugging AIzaSyC3Zah5j_NVIp3gZVZ1cGZjajz6cGsxo4k-->
+<!--This is the API key used for debugging AIzaSyC3Zah5j_NVIp3gZVZ1cGZjajz6cGsxo4k
+This is the server key AIzaSyDYpA5qUH7t80rRfj43-loNsxYrETJQrbs-->
 
 
 
     <uses-permission android:name="android.permission.INTERNET">
     </uses-permission>
 
-  <permission
+ <!-- <permission
         android:name="com.imtanan.finalproject.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature" />
+        android:protectionLevel="signature" /> -->
 
- <!--   <permission
+ <!-- <permission
         android:name="in.wptrafficanalyzer.locationingooglemapv2.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" /> -->
-    <uses-permission android:name="com.imtanan.finalproject.permission.MAPS_RECEIVE"/>
-
+  <!--  <uses-permission android:name="com.imtanan.finalproject.permission.MAPS_RECEIVE"/> -->
+<!-- <uses-permission android:name="in.wptrafficanalyzer.locationingooglemapv2.permission.MAPS_RECEIVE"/> -->
+    
    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
       <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -24,6 +26,10 @@
        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 
+
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 
 
@@ -37,8 +43,11 @@
        android:label="@string/app_name"
        android:theme="@style/AppTheme" >
 
-       <meta-data android:name="com.google.android.geo.API_KEY"
+      <meta-data android:name="com.google.android.geo.API_KEY"
            android:value="AIzaSyC3Zah5j_NVIp3gZVZ1cGZjajz6cGsxo4k"/>
+       <meta-data
+           android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
 
        <activity
            android:name=".Splash"
@@ -61,9 +70,9 @@
   </activity>
         -->
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
+    <!--    <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC3Zah5j_NVIp3gZVZ1cGZjajz6cGsxo4k"/>
-   <!--     <meta-data
+       <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" /> -->
 
