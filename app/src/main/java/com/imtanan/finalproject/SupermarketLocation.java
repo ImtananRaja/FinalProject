@@ -298,11 +298,8 @@ public class SupermarketLocation extends Fragment {
             }
         }
 
-        String search = "https://maps.googleapis.com/maps/api/place/search/json?&name=mosque&rankby=distance&location="
-        + latitude + "," + longitude + "&sensor=true&key=AIzaSyDYpA5qUH7t80rRfj43-loNsxYrETJQrbs"; //"&sensor=true&key=AIzaSyDr8x8BsxcaJ1-akrgKEQruVDaSL8Y8BTA";
-
-        //String search = "https://maps.googleapis.com/maps/api/place/search/json?name=supermarket&rankby=distance&location="
-         //       + latitude + "," + longitude + "&sensor=true&key=AIzaSyC3Zah5j_NVIp3gZVZ1cGZjajz6cGsxo4k";
+        String search = "https://maps.googleapis.com/maps/api/place/search/json?type=grocery_or_supermarket&rankby=distance&location="
+        + latitude + "," + longitude + "&sensor=true&key=AIzaSyDr8x8BsxcaJ1-akrgKEQruVDaSL8Y8BTA";
 
         PlacesTask placesTask = new PlacesTask();
         placesTask.execute(search);

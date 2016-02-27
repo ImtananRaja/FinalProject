@@ -37,6 +37,7 @@ public class SearchRecipes extends Fragment implements View.OnClickListener {
     private TextView textViewResult3;
     private TextView textView;
     private ProgressDialog loading;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
