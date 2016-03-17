@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 public class EditRecipesFragment extends Fragment implements View.OnClickListener {
 
-    private EditText editTextId;
+   // private EditText editTextId;
     private EditText editTextName;
     private EditText editTextOrigin;
     private EditText editTextIngre;
@@ -43,7 +43,7 @@ public class EditRecipesFragment extends Fragment implements View.OnClickListene
 
         id = intent.getStringExtra(Config.REC_ID);
 
-        editTextId = (EditText) v.findViewById(R.id.editTextId);
+       // editTextId = (EditText) v.findViewById(R.id.editTextId);
         editTextName = (EditText) v.findViewById(R.id.editTextName);
         editTextOrigin = (EditText) v.findViewById(R.id.editTextOrigin);
         editTextIngre = (EditText) v.findViewById(R.id.editTextIngre);
@@ -55,13 +55,13 @@ public class EditRecipesFragment extends Fragment implements View.OnClickListene
         buttonUpdate.setOnClickListener(EditRecipesFragment.this);
         //buttonDelete.setOnClickListener(this);
 
-        editTextId.setText(id);
+       // editTextId.setText(id);
 
-        getRecipe();
+       // getRecipe();
         return v;
     }
 
-    private void getRecipe() {
+  /*  private void getRecipe() {
         class GetRecipe extends AsyncTask<Void, Void, String> {
             ProgressDialog loading;
 
@@ -88,7 +88,7 @@ public class EditRecipesFragment extends Fragment implements View.OnClickListene
         GetRecipe gr = new GetRecipe();
         gr.execute();
     }
-
+*/
     private void showRecipe(String json) {
         try {
             JSONObject jsonObject = new JSONObject(json);
@@ -135,7 +135,7 @@ public class EditRecipesFragment extends Fragment implements View.OnClickListene
             @Override
             protected String doInBackground(Void... params) {
                 HashMap<String, String> hashMap = new HashMap<>();
-                hashMap.put(Config.KEY_REC_ID, id);
+               // hashMap.put(Config.KEY_REC_ID, id);
                 hashMap.put(Config.KEY_REC_NAME, name);
                 hashMap.put(Config.KEY_REC_ORIGIN ,origin);
                 hashMap.put(Config.KEY_REC_INGRE, ingre);

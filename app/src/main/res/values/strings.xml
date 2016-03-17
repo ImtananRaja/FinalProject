@@ -5,17 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="page_title">Page title</string>
-    <string name="compass_notice1">compass notice 1 on the compass_fragment</string>
-    <string name="compass_notice2">this is notice 2 on the compass_fragment</string>
     <string name="supermarket_location">Your location is: </string>
-    <string name="events_notice1">This is the about us page which is in the events_fragment.xml</string>
-    <string name="prayertimes_notice1"></string>
-    <string name="prayertimes_notice2">prayer times notice 2</string>
-    <string name="prayertimes_cityselection"> this is the prayertimes_cityselection on the prayertimes_fragment</string>
     <string name="drawer_open">thedraweropen</string>
     <string name="drawer_close">closedrawer</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_login">Lets Cook</string>
+    <string name="title_activity_register">Lets Cook</string>
     <string name="string_enter_name">Enter your name</string>
     <string name="string_choose_username">Choose your username</string>
     <string name="string_choose_password">Choose your password</string>
@@ -23,6 +17,10 @@
     <string name="button_register">Register</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
-    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_splash">Lets Cook</string>
+    <string name="regname">Chef, your full name</string>
+    <string name="regusername">Chef, decide a username</string>
+    <string name="regpassword">Secret recipe, I mean password</string>
+    <string name="regemail">Chef@thegreatest.maybe</string>
 
 </resources>

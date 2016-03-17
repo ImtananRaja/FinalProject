@@ -3,14 +3,11 @@ package com.imtanan.finalproject;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -25,8 +22,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextUsername;
     private EditText editTextPassword;
     private EditText editTextEmail;
-
-    private Button buttonRegister;
+    private ImageButton buttonRegister;
+    //private Button buttonRegister;
 
     //Made public and placed in the Config file of the application to make easier access
    // private static final String REGISTER_URL = "http://iaraja.mohammedsohaib.com/mobile/register.php";
@@ -42,7 +39,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
+       // buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        buttonRegister = (ImageButton) findViewById(R.id.buttonRegister);
 
         buttonRegister.setOnClickListener(this);
     }

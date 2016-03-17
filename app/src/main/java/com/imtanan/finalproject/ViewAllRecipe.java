@@ -110,6 +110,7 @@ public class ViewAllRecipe extends android.support.v4.app.Fragment implements Li
         HashMap<String, String> map = (HashMap) parent.getItemAtPosition(position);
         String RecId = map.get(Config.TAG_ID).toString();
         i.putExtra(Config.REC_ID, RecId);
-        getActivity().startActivity(i);
+      //  getActivity().startActivityFromFragment(this,i,1 );
+        //getActivity().startActivity(i);
     }
 }

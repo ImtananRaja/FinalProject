@@ -45,7 +45,7 @@ public class NavigationActivity extends AppCompatActivity {
         mNavItems.add(new NavigationItem("Find a Store", R.drawable.location_pinpoint));
         mNavItems.add(new NavigationItem("Search Recipes", R.drawable.searchrecipes));
         mNavItems.add(new NavigationItem("Create A Recipe", R.drawable.create_recipe));
-        mNavItems.add(new NavigationItem("View All Recipes", R.drawable.ic_launcher));
+       // mNavItems.add(new NavigationItem("View All Recipes", R.drawable.ic_launcher));
         mNavItems.add(new NavigationItem("About Us", R.drawable.about_us));
         mNavItems.add(new NavigationItem("Logout ", R.drawable.ic_launcher));
 
@@ -137,19 +137,19 @@ public class NavigationActivity extends AppCompatActivity {
          //   case 5:
            //     fragment = new EditRecipesFragment();
              //   break;
+         //   case 5:
+           //     fragment = new ViewAllRecipe();
+          //      break;
             case 5:
-                fragment = new ViewAllRecipe();
-                break;
-            case 6:
                 fragment = new AboutUsFragment();
                 break;
-            case 7:
+            case 6:
                 fragment = new LogoutFragment();
                 break;
 
         }
 
-        if(position == 7){
+        if(position == 6){
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setMessage("Are you sure you want to logout?");
             alertDialogBuilder.setPositiveButton("Yes",
