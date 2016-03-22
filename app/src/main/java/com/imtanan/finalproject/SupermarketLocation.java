@@ -299,7 +299,7 @@ public class SupermarketLocation extends Fragment {
         }
 
         String search = "https://maps.googleapis.com/maps/api/place/search/json?type=grocery_or_supermarket&rankby=distance&location="
-        + latitude + "," + longitude + "&sensor=true&key=";
+        + latitude + "," + longitude + "&sensor=true&key=AIzaSyDr8x8BsxcaJ1-akrgKEQruVDaSL8Y8BTA";
 
         PlacesTask placesTask = new PlacesTask();
         placesTask.execute(search);
