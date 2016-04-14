@@ -8,7 +8,7 @@
     <string name="supermarket_location">Your location is: </string>
     <string name="drawer_open">thedraweropen</string>
     <string name="drawer_close">closedrawer</string>
-    <string name="title_activity_login">Lets Cook</string>
+    <string name="title_activity_login">Let\'s Cook</string>
     <string name="title_activity_register">Lets Cook</string>
     <string name="string_enter_name">Enter your name</string>
     <string name="string_choose_username">Choose your username</string>
@@ -17,10 +17,14 @@
     <string name="button_register">Register</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
-    <string name="title_activity_splash">Lets Cook</string>
+    <string name="title_activity_splash">Let\'s Cook</string>
     <string name="regname">Chef, your full name</string>
     <string name="regusername">Chef, decide a username</string>
     <string name="regpassword">Secret recipe, I mean password</string>
     <string name="regemail">Chef@thegreatest.maybe</string>
+    <string name="string_about_us">Welcome to Let\'s Cook. </string>
+    <string name="string_about_app">Well that\'s  me.
+       Last summer I began on this journey, where after having conversation with my twin realised most of
+        his money was spent on food. That\'s  when it clicked. An idea which can become a reality! </string>
 
 </resources>

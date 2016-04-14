@@ -15,6 +15,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/*
+    This class uses the Config class and allows the registration of a user
+    The XML for this class is activity_register
+
+ */
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -45,6 +50,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         buttonRegister.setOnClickListener(this);
     }
 
+    /*
+    When the user clicks the imageview button the method registerUser(); is ran.
+     */
     @Override
     public void onClick(View v) {
         if(v == buttonRegister){
@@ -54,7 +62,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             startActivity(i);
         }
     }
-
+/*
+    This method allows the registration of the user
+ */
     private void registerUser() {
         String name = editTextName.getText().toString().trim().toLowerCase();
         String username = editTextUsername.getText().toString().trim().toLowerCase();
@@ -77,12 +87,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 super.onPreExecute();
                 loading = ProgressDialog.show(RegisterActivity.this, "Please Wait",null, true, true);
             }
-
+/*
+changed from s to user created 14/4/16
+ */
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 loading.dismiss();
-                Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"User created", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -100,6 +112,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     return result;
 
                    }catch(Exception e){
+                    System.out.println("Error in creating user, please check if you have internet connection");
                     return null;
                 }
             }

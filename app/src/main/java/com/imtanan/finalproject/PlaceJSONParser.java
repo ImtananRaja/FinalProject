@@ -1,8 +1,6 @@
 package com.imtanan.finalproject;
 
-/**
- * Created by Mani on 21/01/2016.
- */
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,6 +9,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+/**
+ * Created by Mani on 21/01/2016.
+ * This class receives a JSON object from the SupermarketLocation class and converts
+ object into a list..
+ * The List is then passed back to the supermarket location to display the markers on the map
+ * Each element in the list has its longitude and latitude displayed on the Map, and the name of the place according to Google
+ */
+
 
 public class PlaceJSONParser {
 

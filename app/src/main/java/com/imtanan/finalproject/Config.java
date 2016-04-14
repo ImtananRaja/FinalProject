@@ -2,6 +2,8 @@ package com.imtanan.finalproject;
 
 /**
  * Created by Mani on 21/01/2016.
+ * This class contains all the external variables used within the application
+ *
  */
 public class Config {
 
@@ -16,7 +18,7 @@ public class Config {
     //The Url for register
     public static final String REGISTER_URL = "http://iaraja.mohammedsohaib.com/mobile/register.php";
 
-    //URL to our login.php file
+    //URL to for login.php file
     public static final String LOGIN_URL = "http://iaraja.mohammedsohaib.com/mobile/login.php";
     //Keys for email and password as defined in our $_POST['key'] in login.php
     public static final String KEY_EMAIL = "email";
@@ -46,9 +48,9 @@ public class Config {
     //Address of our scripts of the CRUD
     public static final String URL_ADD="http://iaraja.mohammedsohaib.com/CRUD_Recipe/Create.php";
     public static final String URL_GET_ALL = "http://iaraja.mohammedsohaib.com/CRU_Recipe/ReadAll.php";
-    public static final String URL_GET_REC = "http://iaraja.mohammedsohaib.com/CRUD_Recipe/Read.php?id=";
+   // public static final String URL_GET_REC = "http://iaraja.mohammedsohaib.com/CRUD_Recipe/Read.php?id=";
     public static final String URL_UPDATE_REC = "http://iaraja.mohammedsohaib.com/CRUD_Recipe/Update.php";
-    public static final String URL_DELETE_REC = "http://iaraja.mohammedsohaib.com/CRUD_Recipe/Delete.php?id=";
+   // public static final String URL_DELETE_REC = "http://iaraja.mohammedsohaib.com/CRUD_Recipe/Delete.php?id=";
 
     //Keys that will be used to send the request to php scripts
     public static final String KEY_REC_ID = "id";
@@ -65,6 +67,6 @@ public class Config {
     public static final String TAG_INGRE = "ingredients";
     public static final String TAG_CM = "cookmethod";
 
-    //employee id to pass with intent
+    //recipe id to pass with intent
     public static final String REC_ID = "rec_id";
 }

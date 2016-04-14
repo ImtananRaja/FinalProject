@@ -2,6 +2,9 @@ package com.imtanan.finalproject;
 
 /**
  * Created by Mani on 03/01/2016.
+ * This class gets the String URL i.e. Search variable and sends it to PlaceJSONParser
+ * Displays every element i.e. supermarket location on the map
+ * Gets the current location and after certain time zooms in on the place
  */
 import android.app.Dialog;
 import android.location.Address;
