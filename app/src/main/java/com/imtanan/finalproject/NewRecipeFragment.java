@@ -54,7 +54,7 @@ public class NewRecipeFragment extends Fragment implements View.OnClickListener{
     private void addRecipe(){
 
         final String name = editTextName.getText().toString().toLowerCase().trim();
-        final String origin = editTextName.getText().toString().toLowerCase().trim();
+        final String origin = editTextOrigin.getText().toString().toLowerCase().trim();
         final String ingre = editTextIngre.getText().toString().toLowerCase().trim();
         final String cm = editTextCM.getText().toString().toLowerCase().trim();
 
