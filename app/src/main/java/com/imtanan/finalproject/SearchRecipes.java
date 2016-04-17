@@ -26,7 +26,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-//import java.util.concurrent.ScheduledExecutorService;
 
 public class SearchRecipes extends Fragment implements View.OnClickListener {
     private EditText editTextId;
@@ -37,7 +36,7 @@ public class SearchRecipes extends Fragment implements View.OnClickListener {
     private TextView textViewResult3;
     private TextView textView;
     private ProgressDialog loading;
-
+//Right what is this
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
